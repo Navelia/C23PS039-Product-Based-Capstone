@@ -64,29 +64,6 @@ news.get('/', async (request, respon) => {
     respon.end(JSON.stringify(data));
 });
 
-news.get('/tribunnews', async (request, respon) => {
-    var result = await tribunnews.getData("news");
-    respon.setHeader('Content-Type', 'application/json');
-    respon.end(JSON.stringify(result));
-});
-
-news.get('/tribunnews/:cat', async (request, respon) => {
-    var result = await tribunnews.getData(request.params.cat || "news");
-    respon.setHeader('Content-Type', 'application/json');
-    respon.end(JSON.stringify(result));
-});
-
-news.get('/tribunnews/:cat/:y/:m/:d/:slug', async (request, respon) => {
-    var result = await tribunnews.getDetail(`${request.params.cat}/
-    ${request.params.y}/
-    ${request.params.m}/
-    ${request.params.d}/
-    ${request.params.slug}`);
-
-    respon.setHeader('Content-Type', 'application/json');
-    respon.end(JSON.stringify(result));
-});
-
 news.get('/cnnindonesia', async (request, respon) => {
     var result = await cnnindonesia.getData("");
     respon.setHeader('Content-Type', 'application/json');
@@ -127,6 +104,30 @@ news.get('/kompas/:cat/:read/:y/:m/:d/:id/:slug', async (request, respon) => {
     ${request.params.m}/
     ${request.params.d}/
     ${request.params.id}/
+    ${request.params.slug}`);
+
+    respon.setHeader('Content-Type', 'application/json');
+    respon.end(JSON.stringify(result));
+});
+
+
+news.get('/tribunnews', async (request, respon) => {
+    var result = await tribunnews.getData("news");
+    respon.setHeader('Content-Type', 'application/json');
+    respon.end(JSON.stringify(result));
+});
+
+news.get('/tribunnews/:cat', async (request, respon) => {
+    var result = await tribunnews.getData(request.params.cat || "news");
+    respon.setHeader('Content-Type', 'application/json');
+    respon.end(JSON.stringify(result));
+});
+
+news.get('/tribunnews/:cat/:y/:m/:d/:slug', async (request, respon) => {
+    var result = await tribunnews.getDetail(`${request.params.cat}/
+    ${request.params.y}/
+    ${request.params.m}/
+    ${request.params.d}/
     ${request.params.slug}`);
 
     respon.setHeader('Content-Type', 'application/json');
