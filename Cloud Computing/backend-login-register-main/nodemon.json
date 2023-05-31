@@ -1,0 +1,10 @@
+{
+    "events": {
+      "start": "echo Starting server...",
+      "restart": "echo Restarting server...",
+      "crash": "echo Server crashed!",
+      "exit": "echo Server stopped."
+    },
+    "verbose": true
+  }
+  
