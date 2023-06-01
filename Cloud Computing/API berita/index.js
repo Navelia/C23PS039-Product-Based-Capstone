@@ -9,54 +9,23 @@ const tribunnews = require('./api/tribunnews');
 news.get('/', async (request, respon) => {
     respon.setHeader('Content-Type', 'application/json');
     const data = {
-        message: 'semua data berita',
-        api:[
+        message: 'all news',
+        section:[
             {
                 name: 'CNN Indonesia',
                 all: '/cnnindonesia',
-                section: [
-                    "/cnnindonesia/nasional",
-                    "/cnnindonesia/internasional",
-                    "/cnnindonesia/ekonomi",
-                    "/cnnindonesia/olahraga",
-                    "/cnnindonesia/hiburan",
-                    "/cnnindonesia/gaya-hidup",
-                    "/cnnindonesia/teknologi"
-                ],
                 detail: '/cnnindonesia/:slug'
             },
             
             {
                 name: 'Kompas',
-                all: '/kompas',
-                section: [
-                    '/kompas/megapolitan',
-                    '/kompas/regional',
-                    '/kompas/nasional',
-                    '/kompas/global',
-                    '/kompas/money',
-                    '/kompas/bola',
-                    '/kompas/tekno',
-                    '/kompas/lifestyle',
-                    '/kompas/health',
-                    '/kompas/otomotif',
-                ],
+                all: '/kompas', 
                 detail: '/kompas/:slug'
             },
 
             {
                 name: 'Tribunnews',
                 all: '/tribunnews',
-                section: [
-                    '/tribunnews/news',
-                    '/tribunnews/regional',
-                    '/tribunnews/nasional',
-                    '/tribunnews/internasional',
-                    '/tribunnews/bisnis',
-                    '/tribunnews/sport',
-                    '/tribunnews/lifestyle',
-                    '/tribunnews/kesehatan',
-                ],
                 detail: '/tribunnews/:slug'
             },
         ]
