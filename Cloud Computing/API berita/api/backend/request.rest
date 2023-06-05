@@ -1,0 +1,70 @@
+POST http://localhost:8000/users
+Content-Type: application/json
+
+{
+  "name": "qwerty",
+  "email": "qwerty@example.com",
+  "password": "secretpassword",
+  "confPassword": "secretpassword",
+  "role": "pengguna"
+}
+
+###
+// get all users
+GET http://localhost:8000/users
+
+###
+// get single user
+GET http://localhost:8000/users/42209c5b-d1f2-47b4-9312-3d3bfd2f7c11
+
+###
+// update user
+PATCH  http://localhost:8000/users/42209c5b-d1f2-47b4-9312-3d3bfd2f7c11
+Content-Type: application/json
+
+{
+  "name": "qwerty123",
+  "email": "qwerty@example.com",
+  "password": "",
+  "confPassword": "",
+  "role": "pengguna"
+}
+
+###
+//delete User
+
+DELETE  http://localhost:8000/users/42209c5b-d1f2-47b4-9312-3d3bfd2f7c11
+Content-Type: application/json
+
+{
+  "name": "qwerty123",
+  "email": "qwerty@example.com",
+  "password": "",
+  "confPassword": "",
+  "role": "pengguna"
+}
+
+###
+//login user admin
+POST http://localhost:8000/login
+Content-Type: application/json
+
+{
+  "email": "johndoe@example.com",
+  "password": "secretpassword"
+}
+###
+//login user pengguna
+POST http://localhost:8000/login
+Content-Type: application/json
+
+{
+  "email": "qwerty@example.com",
+  "password": "secretpassword"
+}
+###
+GET  http://localhost:8000/me
+
+###
+//logout
+DELETE  http://localhost:8000/logout
