@@ -1,0 +1,80 @@
+Orang
+Sepeda
+Mobil
+Sepeda Motor
+Pesawat
+Bus
+Kereta
+Truck
+Kapal
+Lampu lalu lintas
+Pemadam Api
+Tanda Berhenti
+Meteran Parkir
+Bangku
+Burung
+Kucing
+Anjing
+Kuda
+Domba
+Sapi
+Gajah
+Beruang
+Zebra
+Jerapah
+Tas
+Payung
+Tas kecil
+Dasi
+Lemari
+Frisbee
+Ski
+Papan Seluncur
+Bola
+Layang-layang
+Tongkat
+Sarung tangan
+Skateboard
+Papan Luncur
+Raket
+Botol
+Gelas
+Cangkir
+Garpu
+Pisau
+Sendok
+Mangkuk
+Pisang
+Apel
+Sandwich
+Jeruk
+Brokoli
+Wortel
+Hot dog
+Pizza
+Donat
+Kue
+Kursi
+Sofa
+Tanaman di Pot
+Tempat tidur
+Meja
+Toilet
+Televisi
+Laptop
+Mouse
+Remote
+Keyboard
+Telephone
+Microwave
+Oven
+Pemanggang roti
+Wastafel
+Lemari es
+Buku
+Jam
+Vas
+Gunting
+Boneka
+Hair drier
+Sikat gigi

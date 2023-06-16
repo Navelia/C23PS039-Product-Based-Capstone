@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dokumentasi API ReachYou</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">ReachYou</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="index.html#home">Beranda</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">Tentang Kami</a></li>
+          <li><a class="nav-link scrollto" href="index.html#fitur">Fitur</a></li>
+          <li class="dropdown"><a href="#"><span>Pintasan</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#register">Register</a></li>
+              <li><a href="#login">Login</a></li>
+              <li class="dropdown"><a href="#updateusername"><span>Update</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#updateusername">Username</a></li>
+                  <li><a href="#updatepass">Password</a></li>
+                  <li><a href="#updateemail">email</a></li>
+                  <li><a href="#profil">profil</a></li>
+                  <li><a href="#setup">Setup Username & Foto Profil</a></li>
+                </ul>
+              </li>
+              <li><a href="#hapususer">Hapus Pengguna</a></li>
+              <li><a href="#deteksiusername">Deteksi Username</a></li>
+              <li class="dropdown"><a href="#addpoint"><span>Point</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#addpoint">Menambah Point</a></li>
+                  <li><a href="#minpoint">Mengurangi Point</a></li>
+                  <li><a href="#point">Melihat Point</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#laporbug"><span>Bug</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#laporbug">Melaporkan Bug</a></li>
+                  <li><a href="#lihatbug">Melihat Bug</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#seluruh"><span>Data Pengguna</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#seluruh">Melihat seluruh Pengguna</a></li>
+                  <li><a href="#tertentu">Melihat Pengguna tertentu</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#seluruhartikel"><span>Article</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#seluruhartikel">Melihat Seluruh Article</a></li>
+                  <li><a href="#penulisatrikel">Melihat Article sesuai UUID</a></li>
+                  <li><a href="#useratrikel">Melihat Article seuai User UUID</a></li>
+                  <li><a href="#buatatrikel">Membuat Article</a></li>
+                  <li><a href="#gambarartikel">Upload foto article</a></li>
+                  <li><a href="#artikelfoto">Post artikel & foto bersamaan</a></li>
+                </ul>
+              </li>
+              
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="index.html#contact">Kontak</a></li>
+          <li><a class="getstarted scrollto" href="index.html#home">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Dokumentasi</li>
+        </ol>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container">
+        <div class="dokumentasi">
+          <h1>Selamat datang di dokumentasi ReachYou</h1>
+          <p>Halaman ini berisikan dokumtasi route api untuk ReachYou</p>
+          <h1></h1>
+<!-- //////////////////////////////////////////////// -->
+            <div class="card">
+                <h3 id="register">Register</h3>
+                <li>url
+                  <ul class="dokumentasi-bagian">
+                    <li>/register</li>
+                  </ul></li>
+                <li>Method
+                  <ul class="dokumentasi-bagian">
+                    <li>POST</li>
+                  </ul></li>
+                <li>Request Body
+                  <ul class="dokumentasi-bagian">
+                    <li><pre>
+{
+  "email": "XXXXX@XXXXXXX",   => unique
+  "password": "XXXXXX"
+}
+                    </pre></li>
+                  </ul></li>
+                 <li>Response
+                  <ul class="dokumentasi-bagian">
+                    <li><pre>
+{
+ status:201 >> Berhasil                   >> Response
+    {
+        "msg": "Register Berhasil",
+        "uuid": "XXXXXXXXXXX"
+    }
+ status:400 >> Jika Email telah digunakan >> msg: "Email sudah digunakan"
+ status:400 >> Gagal                      >> msg: error.message
+}
+                    </pre></li>
+                   </ul></li>
+            </div>
+<!-- //////////////////////////////////////////////// -->
+            <h1></h1>
+            <div class="card">
+              <h3 id="login">Login</h3>
+              <li>url
+                <ul class="dokumentasi-bagian">
+                  <li>/login</li>
+                </ul></li>
+              <li>Method
+                <ul class="dokumentasi-bagian">
+                  <li>POST</li>
+                </ul></li>
+              <li>Request Body
+                <ul class="dokumentasi-bagian">
+                  <li><pre>
+{
+  "username": "XXXXXXX",
+  "password": "XXXXXXXXXXXXX"
+}
+                  </pre></li>
+                </ul></li>
+               <li>Response
+                <ul class="dokumentasi-bagian">
+                    <li><pre>
+{
+  Status 200 >> Berhasil      >> Menampilkan Response
+      {
+      "uuid": "XXXXXXXXXXXX",
+      "username": "XXXXXXX",
+      "email": "XXXXXXXXXXXXX",
+      "point": "XXXX",
+      "url": "XXXXXXX" =>foto profil
+      }
+  Status 400 >> Username Salah >> msg: "User tidak ditemukan"
+  Status 400 >> Password Salah >> msg: "Wrong Password"
+}
+                  </pre></li>
+                 </ul></li>
+          </div>
+<!-- //////////////////////////////////////////////// -->
+          <h1></h1>
+          <div class="card">
+            <h3 id="updateusername">Update Username</h3>
+            <li>url
+              <ul class="dokumentasi-bagian">
+                <li>/updateusername/:id       => ":id" diganti dengan uuid user yang ingin di update</li>
+              </ul></li>
+            <li>Method
+              <ul class="dokumentasi-bagian">
+                <li>PATCH</li>
+              </ul></li>
+            <li>Request Body
+              <ul class="dokumentasi-bagian">
+                <li><pre>
+{
+  "username" : "xxxxxxxxxx",  => unique, min. 3 karakter
+  //jika kosong maka akan menggunakan data yang lama
+}
+                </pre></li>
+              </ul></li>
+             <li>Response
+              <ul class="dokumentasi-bagian">
+                  <li><pre>
+{
+  Status 200 >> Berhasil                  >> msg: "Username user diperbarui"
+  Status 404 >> UUID Salah                >> msg: "User tidak ditemukan"
+  Status 400 >> Username Sudah Digunakan  >> msg: "Email sudah digunakan"
+  Status 400 >> Gagal                     >> msg: error.message
+}
+                </pre></li>
+               </ul></li>
+        </div>
+<!-- //////////////////////////////////////////////// -->
+<h1></h1>
+          <div class="card">
+            <h3 id="updateemail">Update Email</h3>
+            <li>url
+              <ul class="dokumentasi-bagian">
+                <li>/updateemail/:id       => ":id" diganti dengan uuid user yang ingin di update</li>
+              </ul></li>
+            <li>Method
+              <ul class="dokumentasi-bagian">
+                <li>PATCH</li>
+              </ul></li>
+            <li>Request Body
+              <ul class="dokumentasi-bagian">
+                <li><pre>
+{
+  "email" : "xxxxxxxxxx",  => unique, harus dalam format email
+  //jika kosong maka akan menggunakan data yang lama
+}
+                </pre></li>
+              </ul></li>
+             <li>Response
+              <ul class="dokumentasi-bagian">
+                  <li><pre>
+{
+  Status 200 >> Berhasil              >> msg: "Email user diperbarui"
+  Status 404 >> UUID Salah            >> msg: "User tidak ditemukan"
+  Status 400 >> Email Sudah Digunakan >> msg: "Email sudah digunakan"
+  Status 400 >> Gagal                 >> msg: error.message
+}
+                </pre></li>
+               </ul></li>
+        </div>
+<!-- //////////////////////////////////////////////// -->
+<h1></h1>
+          <div class="card">
+            <h3 id="updatepass">Update Password</h3>
+            <li>url
+              <ul class="dokumentasi-bagian">
+                <li>/updatepass/:id       => ":id" diganti dengan uuid user yang ingin di update</li>
+              </ul></li>
+            <li>Method
+              <ul class="dokumentasi-bagian">
+                <li>PATCH</li>
+              </ul></li>
+            <li>Request Body
+              <ul class="dokumentasi-bagian">
+                <li><pre>
+{
+  "password" : "xxxxxxxxxx"
+  //jika kosong maka akan menggunakan data yang lama
+}
+                </pre></li>
+              </ul></li>
+             <li>Response
+              <ul class="dokumentasi-bagian">
+                  <li><pre>
+{
+  Status 200 >> Berhasil     >> msg: "Password user diperbarui"
+  Status 404 >> UUID Salah   >> msg: "User tidak ditemukan"
+  Status 400 >> Gagal        >> msg: error.message
+}
+                </pre></li>
+               </ul></li>
+        </div>
+<!-- //////////////////////////////////////////////// -->
+        <h1></h1>
+          <div class="card">
+            <h3 id="profil">Update Profil</h3>
+            <li>url
+              <ul class="dokumentasi-bagian">
+                <li>/profil/:id       => ":id" diganti dengan uuid user yang ingin di update</li>
+              </ul></li>
+            <li>Method
+              <ul class="dokumentasi-bagian">
+                <li>PATCH</li>
+              </ul></li>
+            <li>Request Body
+              <ul class="dokumentasi-bagian">
+                <li><pre>
+{
+  Gunakan form-data pada body
+        Key               |  type  |  Value
+    >   file                 file    "pilih gambar"
+  Gambar yang diunggah harus < 5 mb & memiliki format JPG/JPEG/PNG
+}
+                </pre></li>
+              </ul></li>
+             <li>Response
+              <ul class="dokumentasi-bagian">
+                  <li><pre>
+{
+  Status 200 >> Berhasil      >> Menampilkan Response
+      {
+        "msg": "Profile Created Successfully",
+        "url": "XXXXXXXX"
+      }
+  Status 404 >> uuid Salah >> msg: "User not found"
+  Status 400 >> Tidak terdapat file >> msg: "No File Uploaded"
+  Status 422 >> Tidak menggunakan format JPG/JPEG/PNG >> msg: "Invalid Image"
+  Status 422 >> Gambar lebih dari 5 MB >> msg: "Image must be less than 5 MB"
+  Status 500 >> Gagal Upload >> msg: "Failed to upload file to Google Cloud Storage"
+  Status 500 >> Server eror >> msg: "error.message"
+}
+                </pre></li>
+               </ul></li>
+        </div>
+        <!-- //////////////////////////////////////////////// -->
+        <h1></h1>
+          <div class="card">
+            <h3 id="setup">Setup Username & Foto Profil</h3>
+            <li>url
+              <ul class="dokumentasi-bagian">
+                <li>/setup/:id       => ":id" diganti dengan uuid user yang ingin di update</li>
+              </ul></li>
+            <li>Method
+              <ul class="dokumentasi-bagian">
+                <li>PATCH</li>
+              </ul></li>
+            <li>Request Body
+              <ul class="dokumentasi-bagian">
+                <li><pre>
+{
+  Gunakan form-data pada body
+        Key               |  type  |  Value
+    >   username             text    "XXXXXXXXXXXX"
+    >   file                 file    "pilih gambar"
+  Gambar yang diunggah harus < 5 mb & memiliki format JPG/JPEG/PNG
+}
+                </pre></li>
+              </ul></li>
+             <li>Response
+              <ul class="dokumentasi-bagian">
+                  <li><pre>
+{
+  Status 200 >> Berhasil      >> Menampilkan Response
+      {
+        "msg": "Profile Created Successfully",
+        "uuid": "XXXXXXXXXXXXX",
+        "username": "XXXXXXXXXXXXXXX",
+        "url": "XXXXXXXXXXXX"
+      }
+  Status 404 >> uuid Salah >> msg: "User not found"
+  Status 400 >> Username telah terdaftar >> msg: "Username sudah digunakan"
+  Status 400 >> Tidak terdapat file >> msg: "No File Uploaded"
+  Status 422 >> Tidak menggunakan format JPG/JPEG/PNG >> msg: "Invalid Image"
+  Status 422 >> Gambar lebih dari 5 MB >> msg: "Image must be less than 5 MB"
+  Status 500 >> Gagal Upload >> msg: "Failed to upload file to Google Cloud Storage"
+  Status 500 >> Server eror >> msg: "error.message"
+}
+                </pre></li>
+               </ul></li>
+        </div>
+<!-- //////////////////////////////////////////////// -->
+      <h1></h1>
+        <div class="card">
+          <h3 id="hapususer">Menghapus Pengguna</h3>
+          <li>url
+            <ul class="dokumentasi-bagian">
+              <li>/users/:id       => ":id" diganti dengan uuid users yang ingin dihapus</li>
+            </ul></li>
+          <li>Method
+            <ul class="dokumentasi-bagian">
+              <li>DELETE</li>
+            </ul></li>
+          <li>Request Body
+            <ul class="dokumentasi-bagian">
+              <li><pre>
+{
+  "username" : "xxxxxxxxxx",
+  "email": "XXXXX@XXXXXXX",
+  "password": "XXXXXX"
+}
+              </pre></li>
+            </ul></li>
+           <li>Response
+            <ul class="dokumentasi-bagian">
+                <li><pre>
+{
+  Status 200 >> Berhasil      >> msg: "User Deleted"
+  Status 404 >> UUID Salah    >> msg: "User tidak ditemukan"
+  Status 400 >> Gagal         >> msg: error.message
+}
+              </pre></li>
+             </ul></li>
+      </div> 
+  <!-- //////////////////////////////////////////////// -->
+      <h1></h1>
+        <div class="card">
+          <h3 id="deteksiusername">Mendeteksi adanya Username</h3>
+          <li>url
+            <ul class="dokumentasi-bagian">
+              <li>/notifuser/:id      => ":id" diganti dengan uuid users yang ingin dihapus</li>
+            </ul></li>
+          <li>Method
+            <ul class="dokumentasi-bagian">
+              <li>GET</li>
+            </ul></li>
+           <li>Response
+            <ul class="dokumentasi-bagian">
+                <li><pre>
+{
+  Status 200 >> Terdapat Username       >> msg: "Selamat datang, ${response.username}"
+  Status 200 >> Tidak Terdapat Username >> msg: "Silahkan tambahkan Username anda"
+  Status 404 >> UUID Salah              >> msg: "User tidak ditemukan"
+  Status 500 >> Gagal                   >> msg: "Terjadi kesalahan server"
+}
+              </pre></li>
+             </ul></li>
+      </div> 
+<!-- //////////////////////////////////////////////// -->
+<h1></h1>
+          <div class="card">
+            <h3 id="addpoint">Menambah Point</h3>
+            <li>url
+              <ul class="dokumentasi-bagian">
+                <li>/tambahpoint/:id       => ":id" diganti dengan uuid user yang ingin di update</li>
+              </ul></li>
+            <li>Method
+              <ul class="dokumentasi-bagian">
+                <li>PATCH</li>
+              </ul></li>
+            <li>Request Body
+              <ul class="dokumentasi-bagian">
+                <li><pre>
+{
+  "newPoint" : "xxxxxxxxxx" 
+  //Integer
+}
+                </pre></li>
+              </ul></li>
+             <li>Response
+              <ul class="dokumentasi-bagian">
+                  <li><pre>
+{
+  Status 200 >> Berhasil     >> msg: "Point berhasil diperbarui"
+  Status 404 >> UUID Salah   >> msg: "User tidak ditemukan"
+  Status 400 >> Gagal        >> msg: error.message
+}
+                </pre></li>
+               </ul></li>
+        </div>
+<!-- //////////////////////////////////////////////// -->
+<h1></h1>
+          <div class="card">
+            <h3 id="minpoint">Mengurangi Point</h3>
+            <li>url
+              <ul class="dokumentasi-bagian">
+                <li>/kurangpoint/:id       => ":id" diganti dengan uuid user yang ingin di update</li>
+              </ul></li>
+            <li>Method
+              <ul class="dokumentasi-bagian">
+                <li>PATCH</li>
+              </ul></li>
+            <li>Request Body
+              <ul class="dokumentasi-bagian">
+                <li><pre>
+{
+  "newPoint" : "xxxxxxxxxx" 
+  //Integer
+}
+                </pre></li>
+              </ul></li>
+             <li>Response
+              <ul class="dokumentasi-bagian">
+                  <li><pre>
+{
+  Status 200 >> Berhasil     >> msg: "Point berhasil diperbarui"
+  Status 404 >> UUID Salah   >> msg: "User tidak ditemukan"
+  Status 400 >> Gagal        >> msg: error.message
+}
+                </pre></li>
+               </ul></li>
+        </div>
+<!-- //////////////////////////////////////////////// -->
+<h1></h1>
+          <div class="card">
+            <h3 id="point">Melihat Point</h3>
+            <li>url
+              <ul class="dokumentasi-bagian">
+                <li>/point/:id       => ":id" diganti dengan uuid user yang ingin di update</li>
+              </ul></li>
+            <li>Method
+              <ul class="dokumentasi-bagian">
+                <li>GET</li>
+              </ul></li>
+             <li>Response
+              <ul class="dokumentasi-bagian">
+                  <li><pre>
+{
+  Status 200 >> Berhasil   >> Menampilkan Response
+      {
+      "uuid": "XXXXXXXXXXXX",
+      "username": "XXXXXXX",
+      "point": "XXXXXXXXXXXXX"
+      }
+  Status 400 >> error      >> msg: error.message
+}
+                </pre></li>
+               </ul></li>
+        </div>
+    <!-- //////////////////////////////////////////////// -->
+    <h1></h1>
+    <div class="card">
+      <h3 id="laporbug">Lapor Bug</h3>
+      <li>url
+        <ul class="dokumentasi-bagian">
+          <li>/bug</li>
+        </ul></li>
+      <li>Method
+        <ul class="dokumentasi-bagian">
+          <li>POST</li>
+        </ul></li>
+      <li>Request Body
+        <ul class="dokumentasi-bagian">
+          <li><pre>
+{
+  Gunakan form-data pada body
+        Key               |  type  |  Value
+    >   email                text    XXXXXXXXXXXXXX
+    >   bug                  text    XXXXXXXXXXXXXX
+    >   file                 file    "pilih gambar"  
+  Untuk lapor bug, upload gambar opsional
+  Gambar yang diunggah harus < 5 mb & memiliki format JPG/JPEG/PNG
+}
+          </pre></li>
+        </ul></li>
+       <li>Response
+        <ul class="dokumentasi-bagian">
+          <li><pre>
+{
+status:201 >> Berhasil  >> Response
+{
+    "msg": "Bug dilaporkan tanpa gambar" atau "Bug dilaporkan dengan gambar"  => sesuai file, apakah upload gambar atau tidak
+    "bug": {
+        "uuid": "XXXXXXXXXXXX",
+        "id": XXXX,
+        "email": "XXXXXXXXX",
+        "bug": "XXXXXXXXX",
+        "image": "XXXXXXXXXXX",
+        "url": "XXXXXXXXXXXX",
+        "updatedAt": "XXXXXXXXXXXXXXX",
+        "createdAt": "XXXXXXXXXXXX"
+    }
+}
+  Status 422 >> Tidak menggunakan format JPG/JPEG/PNG >> msg: "Invalid Image"
+  Status 422 >> Gambar lebih dari 5 MB >> msg: "Image must be less than 5 MB"
+  Status 500 >> Gagal Upload >> msg: "Failed to upload file to Google Cloud Storage"
+  Status 500 >> Server eror >> msg: "error.message"
+}
+          </pre></li>
+         </ul></li>
+  </div>
+    <!-- //////////////////////////////////////////////// -->
+  <h1></h1>
+          <div class="card">
+            <h3 id="lihatbug">Melihat Bug</h3>
+            <li>url
+              <ul class="dokumentasi-bagian">
+                <li>/bug      => ":id" diganti dengan uuid user yang ingin di update</li>
+              </ul></li>
+            <li>Method
+              <ul class="dokumentasi-bagian">
+                <li>GET</li>
+              </ul></li>
+             <li>Response
+              <ul class="dokumentasi-bagian">
+                  <li><pre>
+{
+  Status 200 >> Berhasil   >> Menampilkan Response
+      {
+        Menampilkan semua data pada tabel bug & url di database.
+      }
+  Status 400 >> error      >> msg: error.message
+}
+                </pre></li>
+               </ul></li>
+        </div>
+      <!-- //////////////////////////////////////////////// -->
+      <h1></h1>
+        <div class="card">
+          <h3 id="seluruh">Melihat Data Semua Pengguna</h3>
+          <li>url
+            <ul class="dokumentasi-bagian">
+              <li>/users</li>
+            </ul></li>
+          <li>Method
+            <ul class="dokumentasi-bagian">
+              <li>GET</li>
+            </ul></li>
+           <li>Response
+            <ul class="dokumentasi-bagian">
+                <li><pre>
+{
+  Status 200 >> Berhasil   >> Menampilkan Response
+      {
+        Menampilkan semua data pada tabel "uuid, username & email" di database.
+      }
+  Status 500 >> error      >> msg: error.message
+}
+              </pre></li>
+             </ul></li>
+      </div> 
+<!-- //////////////////////////////////////////////// -->
+      <h1></h1>
+        <div class="card">
+          <h3 id="tertentu">Melihat Data Satu Pengguna</h3>
+          <li>url
+            <ul class="dokumentasi-bagian">
+              <li>/users/:id       => ":id" diganti dengan uuid users yang ingin dilihat</li>
+            </ul></li>
+          <li>Method
+            <ul class="dokumentasi-bagian">
+              <li>GET</li>
+            </ul></li>
+           <li>Response
+            <ul class="dokumentasi-bagian">
+                <li><pre>
+{
+  Status 200 >> Berhasil   >> Menampilkan Response
+      {
+        Menampilkan semua data pada tabel "uuid, username, email & url foto profil" di database.
+      }
+  Status 500 >> error      >> msg: error.message
+}
+              </pre></li>
+             </ul></li>
+      </div>
+      <!-- //////////////////////////////////////////////// -->
+      <h1></h1>
+        <div class="card">
+          <h3 id="seluruhartikel">Melihat Semua Article</h3>
+          <li>url
+            <ul class="dokumentasi-bagian">
+              <li>/article</li>
+            </ul></li>
+          <li>Method
+            <ul class="dokumentasi-bagian">
+              <li>GET</li>
+            </ul></li>
+           <li>Response
+            <ul class="dokumentasi-bagian">
+                <li><pre>
+{
+  Status 200 >> Berhasil   >> Menampilkan Response
+      {
+        "uuid": "xxxxxxxx",
+        "id": xxxxxxx,
+        "title": "xxxxxxxx",
+        "description": "xxxxxxxxx",
+        "url": "xxxxxxxx",
+        "createdAt": "xxxx-xx-xx"
+      }   //Data ini akan ditampilkan untuk semua article yang ada
+  Status 500 >> error      >> msg: error.message
+}
+              </pre></li>
+             </ul></li>
+      </div> 
+<!-- //////////////////////////////////////////////// -->
+      <h1></h1>
+        <div class="card">
+          <h3 id="useratrikel">Melihat Article seuai UUID</h3>
+          <li>url
+            <ul class="dokumentasi-bagian">
+              <li>/article/:id       => ":id" diganti dengan id yang ingin dilihat</li>
+            </ul></li>
+          <li>Method
+            <ul class="dokumentasi-bagian">
+              <li>GET</li>
+            </ul></li>
+           <li>Response
+            <ul class="dokumentasi-bagian">
+                <li><pre>
+{
+  Status 200 >> Berhasil   >> Menampilkan Response
+      {
+        "uuid": "XXXXXXXX",
+        "id": XXX,
+        "userUUID": "XXXXXXXXX",
+        "username": "XXXXX",
+        "profil": "XXXXXXX",
+        "title": "XXXXXX",
+        "description": "XXXXXXXXXX",
+        "image": "XXXXXXXXX",
+        "url": "XXXXXXXXXXX",
+        "createdAt": "XXXXXX"
+      }
+  Status 500 >> error      >> msg: error.message
+}
+              </pre></li>
+             </ul></li>
+      </div>
+
+<!-- //////////////////////////////////////////////// -->
+      <h1></h1>
+        <div class="card">
+          <h3 id="penulisatrikel">Melihat Article seuai User UUID</h3>
+          <li>url
+            <ul class="dokumentasi-bagian">
+              <li>/postingan/:id       => ":id" diganti dengan uuid users yang ingin dilihat</li>
+            </ul></li>
+          <li>Method
+            <ul class="dokumentasi-bagian">
+              <li>GET</li>
+            </ul></li>
+           <li>Response
+            <ul class="dokumentasi-bagian">
+                <li><pre>
+{
+  Status 200 >> Berhasil   >> Menampilkan Response
+        {
+        "msg": "Article created with image",
+        "article": {
+                    "uuid": "XXXXXXXX",
+                    "id": XXX,
+                    "title": "XXXXXX",
+                    " description": "XXXXXXXXXX",
+                    "image": "XXXXXXXXX",
+                    "url": "XXXXXXXXXXX",
+                    "userUUID": "XXXXXXXXX",
+                    "username": "XXXXX",
+                    "profil": "XXXXXXX",
+                    "updatedAt": "XXXXXXX",
+                    "createdAt": "XXXXXX"
+                    }
+        }
+  Status 500 >> error      >> msg: error.message
+}
+              </pre></li>
+             </ul></li>
+      </div>
+<!-- //////////////////////////////////////////////// -->
+<h1></h1>
+            <div class="card">
+                <h3 id="buatatrikel">Buat Article</h3>
+                <li>url
+                  <ul class="dokumentasi-bagian">
+                    <li>/article/:id   => id diganti dengan uuid pengguna</li>
+                  </ul></li>
+                <li>Method
+                  <ul class="dokumentasi-bagian">
+                    <li>POST</li>
+                  </ul></li>
+                <li>Request Body
+                  <ul class="dokumentasi-bagian">
+                    <li><pre>
+{
+  "title": "xxxxxxx",
+  "description" : "xxxxxx"
+}
+                    </pre></li>
+                  </ul></li>
+                 <li>Response
+                  <ul class="dokumentasi-bagian">
+                    <li><pre>
+{
+ status:201 >> Berhasil                   >> Response
+            {
+                "uuid": "xxxxxxx",
+                "id": x,
+                "title": xxxxxxx",
+                "description": "xxxxxxxxx",
+                "userUUID": "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "username": "XXXXXXXXXXXXXXXXXXXX",
+                "profil": "XXXXXXXXXXXXXXXXXXXX",
+                "updatedAt": "xxxx-xx-xx",
+                "createdAt": "xxxx-xx-xx"
+}
+ status:500 >> Gagal                      >> msg: error.message
+}
+                    </pre></li>
+                   </ul></li>
+            </div>
+<!-- //////////////////////////////////////////////// -->   
+<!-- //////////////////////////////////////////////// -->
+<h1></h1>
+            <div class="card">
+                <h3 id="gambarartikel">Upload Gambar Article</h3>
+                <li>url
+                  <ul class="dokumentasi-bagian">
+                    <li>/article</li>
+                  </ul></li>
+                <li>Method
+                  <ul class="dokumentasi-bagian">
+                    <li>PATCH</li>
+                  </ul></li>
+                <li>Request Body
+                  <ul class="dokumentasi-bagian">
+                    <li><pre>
+{
+  Gunakan form-data pada body
+        Key               |  type  |  Value
+    >   file                 file    "pilih gambar"
+  Gambar yang diunggah harus < 5 mb & memiliki format JPG/JPEG/PNG
+}
+                    </pre></li>
+                  </ul></li>
+                 <li>Response
+                  <ul class="dokumentasi-bagian">
+                    <li><pre>
+{
+    "msg": "Foto berhasil ditambah",
+    "url": "XXXXXXXXXXXXXXXXXX"
+}
+                    </pre></li>
+                   </ul></li>
+            </div>
+  <!-- //////////////////////////////////////////////// --> 
+  <!-- //////////////////////////////////////////////// -->
+<h1></h1>
+            <div class="card">
+                <h3 id="artikelfoto">Upoad Artikel dan Gambar dalam satu 'POST'</h3>
+                <li>url
+                  <ul class="dokumentasi-bagian">
+                    <li>/articlegambar/:id    => id diganti dengan uuid pengguna</li>
+                  </ul></li>
+                <li>Method
+                  <ul class="dokumentasi-bagian">
+                    <li>POST</li>
+                  </ul></li>
+                <li>Request Body
+                  <ul class="dokumentasi-bagian">
+                    <li><pre>
+{
+  Gunakan form-data pada body
+        Key               |  type  |  Value
+    >   title                text    XXXXXXXXXXXXXX
+    >   description          text    XXXXXXXXXXXXXX
+    >   file                 file    "pilih gambar"
+
+  Gambar yang diunggah harus < 5 mb & memiliki format JPG/JPEG/PNG
+}
+                    </pre></li>
+                  </ul></li>
+                 <li>Response
+                  <ul class="dokumentasi-bagian">
+                    <li><pre>
+{
+ status:201 >> Berhasil                   >> Response
+    {
+    "msg": "Article created with image",
+    "article": {
+        "uuid": "XXXXXXXXXXXXX",
+        "id": XX,
+        "title": "XXXXXXXXXXXX",
+        "description": "XXXXXXXXXXXX",
+        "image": "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "url": "XXXXXXXXXXXXXXXXXXXX",
+        "userUUID": "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "username": "XXXXXXXXXXXXXXXXXXXX",
+        "profil": "XXXXXXXXXXXXXXXXXXXX",
+        "updatedAt": "XXXXXXXXXXXXX",
+        "createdAt": "XXXXXXXXXXX"
+    }
+  Status 422 >> Tidak menggunakan format JPG/JPEG/PNG >> msg: "Invalid Image"
+  Status 422 >> Gambar lebih dari 5 MB >> msg: "Image must be less than 5 MB"
+  Status 500 >> Gagal Upload >> msg: "Failed to upload file to Google Cloud Storage"
+  Status 500 >> Server eror >> msg: "error.message"
+}
+                    </pre></li>
+                   </ul></li>
+            </div>
+  <!-- //////////////////////////////////////////////// --> 
+    
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>ReachYou</h3>
+            <p>
+              Lorem Ipsum <br>
+              dolor sit amet,<br>
+              Indonesia<br><br>
+              <strong>WA:</strong> +62800 0000 0000<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Halaman :</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#home">Beranda</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#about">Tentang Kami</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#fitur">Fitur</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#contact">Kontak</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="dokumentasi.html">Dokumentasi</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Feature</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#fitur">Bisindo</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#fitur">Deteksi Warna</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#fitur">Deteksi Uang</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#fitur">Deteksi Objek</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#fitur">Quiz</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#fitur">News</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        2023 &copy; Copyright <strong><span>Reach You</span></strong>.
+      </div>
+    
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
